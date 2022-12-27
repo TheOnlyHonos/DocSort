@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 3f2f43b58acc02f478a320f6295c3fd9
+  - enabled: 1
+    path: Assets/Scenes/NewMessagePrototypeScene.unity
+    guid: d23785ed83a6437409b8730756bb10c3
   m_configObjects: {}

@@ -13,7 +13,6 @@ public class Timer : MonoBehaviour
     void Start()
     {
         TimeLeft = SceneDataManager.TimeLeft;
-
         updateTimer(TimeLeft);
     }
 
