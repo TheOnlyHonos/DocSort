@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LetterSpawner : MonoBehaviour
 {
-    static int LetterCount = 4;
+    static int LetterCount = 1;
     public Transform[] Spawns;
     public GameObject[] Letter;
 

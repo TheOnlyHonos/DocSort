@@ -3,25 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewMessagePrototype : MonoBehaviour
+public class NewDocumentPrototype : MonoBehaviour
 {
+    public int Id = 0;
     string SceneName = "NewMessagePrototypeScene";
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnMouseDown()
     {
-        SceneDataManager.DocumentToSpawnInExecFolder.Add(0);
         SceneManager.LoadScene(SceneName);
-        Destroy(gameObject);
     }
 }
