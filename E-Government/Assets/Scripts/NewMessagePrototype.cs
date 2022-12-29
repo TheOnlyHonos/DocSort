@@ -20,7 +20,6 @@ public class NewMessagePrototype : MonoBehaviour
 
     private void OnMouseDown()
     {
-        SceneDataManager.DocumentToSpawnInExecFolder.Add(0);
         SceneManager.LoadScene(SceneName);
         Destroy(gameObject);
     }

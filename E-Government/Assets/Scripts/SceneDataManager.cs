@@ -9,6 +9,7 @@ public class SceneDataManager : MonoBehaviour
     public static List<int> DocumentToSpawnInExecFolder = new List<int>();
     public static List<int> DocumentToSpawnInLegisFolder = new List<int>();
     public static List<int> DocumentToSpawnInJudiFolder = new List<int>();
+    public static List<int> DocumentToSpawnInRecycleBin = new List<int>();
 
     public static float TimeLeft = 600;
     public bool IsTimerOn = true;

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class NewDocumentPrototypeReadFile : MonoBehaviour
 {
 
-    int id;
+    int id = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,7 @@ public class NewDocumentPrototypeReadFile : MonoBehaviour
     
     public void SendToExecFolder()
     {
-        SceneDataManager.DocumentToSpawnInExecFolder.Add(0);
+        SceneDataManager.DocumentToSpawnInExecFolder.Add(id);
 
         for(int i = 0; i < SceneDataManager.DocumentToSpawnInLegisFolder.Count; i++)
         {
@@ -39,12 +39,20 @@ public class NewDocumentPrototypeReadFile : MonoBehaviour
             }
         }
 
-        SceneManager.LoadScene("Mail");
+        for (int i = 0; i < SceneDataManager.DocumentToSpawnInRecycleBin.Count; i++)
+        {
+            if (SceneDataManager.DocumentToSpawnInRecycleBin[i] == id)
+            {
+                SceneDataManager.DocumentToSpawnInRecycleBin.Remove(i);
+            }
+        }
+
+        SceneManager.LoadScene("FolderExec");
     }
 
     public void SendToLegisFolder()
     {
-        SceneDataManager.DocumentToSpawnInLegisFolder.Add(0);
+        SceneDataManager.DocumentToSpawnInLegisFolder.Add(id);
 
         for (int i = 0; i < SceneDataManager.DocumentToSpawnInExecFolder.Count; i++)
         {
@@ -58,33 +66,80 @@ public class NewDocumentPrototypeReadFile : MonoBehaviour
         {
             if (SceneDataManager.DocumentToSpawnInJudiFolder[i] == id)
             {
-                SceneDataManager.DocumentToSpawnInJudiFolder.Remove(i-1);
+                SceneDataManager.DocumentToSpawnInJudiFolder.Remove(i);
             }
         }
 
-        SceneManager.LoadScene("Mail");
+        for (int i = 0; i < SceneDataManager.DocumentToSpawnInRecycleBin.Count; i++)
+        {
+            if (SceneDataManager.DocumentToSpawnInRecycleBin[i] == id)
+            {
+                SceneDataManager.DocumentToSpawnInRecycleBin.Remove(i);
+            }
+        }
+
+        SceneManager.LoadScene("FolderLegis");
     }
 
     public void SendToJudiFolder()
     {
-        SceneDataManager.DocumentToSpawnInJudiFolder.Add(0);
-
-        for (int i = 0; i < SceneDataManager.DocumentToSpawnInLegisFolder.Count; i++)
-        {
-            if (SceneDataManager.DocumentToSpawnInLegisFolder[i] == id)
-            {
-                SceneDataManager.DocumentToSpawnInLegisFolder.Remove(i-1);
-            }
-        }
+        SceneDataManager.DocumentToSpawnInJudiFolder.Add(id);
 
         for (int i = 0; i < SceneDataManager.DocumentToSpawnInExecFolder.Count; i++)
         {
             if (SceneDataManager.DocumentToSpawnInExecFolder[i] == id)
             {
-                SceneDataManager.DocumentToSpawnInExecFolder.Remove(i-1);
+                SceneDataManager.DocumentToSpawnInExecFolder.Remove(i);
             }
         }
 
-        SceneManager.LoadScene("Mail");
+        for (int i = 0; i < SceneDataManager.DocumentToSpawnInLegisFolder.Count; i++)
+        {
+            if (SceneDataManager.DocumentToSpawnInLegisFolder[i] == id)
+            {
+                SceneDataManager.DocumentToSpawnInLegisFolder.Remove(i);
+            }
+        }
+
+        for (int i = 0; i < SceneDataManager.DocumentToSpawnInRecycleBin.Count; i++)
+        {
+            if (SceneDataManager.DocumentToSpawnInRecycleBin[i] == id)
+            {
+                SceneDataManager.DocumentToSpawnInRecycleBin.Remove(i);
+            }
+        }
+
+        SceneManager.LoadScene("FolderJudi");
+    }
+
+    public void SendToRecycleBin()
+    {
+        SceneDataManager.DocumentToSpawnInRecycleBin.Add(id);
+
+        for (int i = 0; i < SceneDataManager.DocumentToSpawnInExecFolder.Count; i++)
+        {
+            if (SceneDataManager.DocumentToSpawnInExecFolder[i] == id)
+            {
+                SceneDataManager.DocumentToSpawnInExecFolder.Remove(i);
+            }
+        }
+
+        for (int i = 0; i < SceneDataManager.DocumentToSpawnInLegisFolder.Count; i++)
+        {
+            if (SceneDataManager.DocumentToSpawnInLegisFolder[i] == id)
+            {
+                SceneDataManager.DocumentToSpawnInLegisFolder.Remove(i);
+            }
+        }
+
+        for (int i = 0; i < SceneDataManager.DocumentToSpawnInJudiFolder.Count; i++)
+        {
+            if (SceneDataManager.DocumentToSpawnInJudiFolder[i] == id)
+            {
+                SceneDataManager.DocumentToSpawnInJudiFolder.Remove(i);
+            }
+        }
+
+        SceneManager.LoadScene("RecycleBin");
     }
 }

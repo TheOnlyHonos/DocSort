@@ -516,7 +516,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 935574437}
-  - component: {fileID: 935574436}
   - component: {fileID: 935574435}
   m_Layer: 0
   m_Name: DocumentSpawner
@@ -541,20 +540,6 @@ MonoBehaviour:
   - {fileID: 1644102263}
   Document:
   - {fileID: 2505597742929135117, guid: 50cebd5799694e54c942f73312d88a2d, type: 3}
---- !u!114 &935574436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935574434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c50037ec1572bc94998b067947a09729, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Spawns: []
-  Document: []
 --- !u!4 &935574437
 Transform:
   m_ObjectHideFlags: 0
