@@ -12,6 +12,7 @@ public class DocumenSpawnerRecycleBin : MonoBehaviour
         spawnDocs();
     }
 
+    //Checks if there is a document that needed to be spawned in the Recycle Bin and spawns those document/s based on the id
     private void spawnDocs()
     {
         if (SceneDataManager.DocumentToSpawnInRecycleBin.Count > 0)

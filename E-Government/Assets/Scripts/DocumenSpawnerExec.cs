@@ -12,6 +12,8 @@ public class DocumenSpawnerExec : MonoBehaviour
         spawnDocs();
     }
 
+
+    //Checks if there is a document that needed to be spawned in the Executive folder and spawns those document/s based on the id
     private void spawnDocs()
     {
         if (SceneDataManager.DocumentToSpawnInExecFolder.Count > 0)

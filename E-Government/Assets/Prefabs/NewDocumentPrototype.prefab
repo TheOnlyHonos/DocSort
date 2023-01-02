@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3075736692306888171}
   - component: {fileID: -4471893329592222658}
-  - component: {fileID: 2524233303569158976}
+  - component: {fileID: 3985895482784628743}
   - component: {fileID: 6878289010382375670}
   m_Layer: 0
   m_Name: NewDocumentPrototype
@@ -264,7 +264,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2524233303569158976
+--- !u!114 &3985895482784628743
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -273,9 +273,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2505597742929135117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36a9f28c55f71764f87a1f3800959289, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f20afc12af698e44af5c92393e160d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneName: NewMessagePrototypeScene
 --- !u!61 &6878289010382375670
 BoxCollider2D:
   m_ObjectHideFlags: 0

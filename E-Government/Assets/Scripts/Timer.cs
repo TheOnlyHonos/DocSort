@@ -5,27 +5,23 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-
-    public float TimeLeft;
-    public bool IsTimerOn = true;
     public TextMeshProUGUI TimerTxt;
 
     void Start()
     {
-        TimeLeft = SceneDataManager.TimeLeft;
-        updateTimer(TimeLeft);
+        updateTimer(SceneDataManager.TimeLeft);
     }
 
     // Update is called once per frame
     void Update()
     {
-        TimeLeft = SceneDataManager.TimeLeft;
-        if (IsTimerOn == true)
+        if (SceneDataManager.IsTimerOn == true)
         {
-            updateTimer(TimeLeft);
+            updateTimer(SceneDataManager.TimeLeft);
         }
     }
 
+    //Display the timeleft in minutes and seconds
     void updateTimer(float currentTime)
     {
         currentTime += 1;

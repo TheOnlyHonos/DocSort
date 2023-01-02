@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+//Script to detect mouse click on Document file type
 public class NewDocumentPrototype : MonoBehaviour
 {
-    public int Id = 0;
-    string SceneName = "NewMessagePrototypeScene";
+    public string SceneName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,7 @@ public class NewDocumentPrototype : MonoBehaviour
 
     }
 
+    //Load document scene on click
     private void OnMouseDown()
     {
         SceneManager.LoadScene(SceneName);

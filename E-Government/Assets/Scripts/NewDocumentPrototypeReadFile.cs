@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class NewDocumentPrototypeReadFile : MonoBehaviour
 {
-
+    //Variable to hold Document id
     int id = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class NewDocumentPrototypeReadFile : MonoBehaviour
         
     }
     
+    //Button in the scene to send the document to the Executive folder and delete the document from other folders
     public void SendToExecFolder()
     {
         SceneDataManager.DocumentToSpawnInExecFolder.Add(id);
@@ -50,6 +52,7 @@ public class NewDocumentPrototypeReadFile : MonoBehaviour
         SceneManager.LoadScene("FolderExec");
     }
 
+    //Button in the scene to send the document to the Legislative folder and delete the document from other folders
     public void SendToLegisFolder()
     {
         SceneDataManager.DocumentToSpawnInLegisFolder.Add(id);
@@ -81,6 +84,7 @@ public class NewDocumentPrototypeReadFile : MonoBehaviour
         SceneManager.LoadScene("FolderLegis");
     }
 
+    //Button in the scene to send the document to the Judicial folder and delete the document from other folders
     public void SendToJudiFolder()
     {
         SceneDataManager.DocumentToSpawnInJudiFolder.Add(id);
@@ -112,6 +116,7 @@ public class NewDocumentPrototypeReadFile : MonoBehaviour
         SceneManager.LoadScene("FolderJudi");
     }
 
+    //Button in the scene to send the document to the Recycle Bin and delete the document from other folders
     public void SendToRecycleBin()
     {
         SceneDataManager.DocumentToSpawnInRecycleBin.Add(id);

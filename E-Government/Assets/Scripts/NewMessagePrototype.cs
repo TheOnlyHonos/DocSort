@@ -3,21 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+//Script to spawn new messages containing documents
 public class NewMessagePrototype : MonoBehaviour
 {
-    string SceneName = "NewMessagePrototypeScene";
-    // Start is called before the first frame update
+
+    public string SceneName;
+    //Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    //Update is called once per frame
     void Update()
     {
         
     }
 
+    //Load document scene on click and delete the message
     private void OnMouseDown()
     {
         SceneManager.LoadScene(SceneName);

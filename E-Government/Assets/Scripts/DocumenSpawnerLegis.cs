@@ -12,6 +12,7 @@ public class DocumenSpawnerLegis : MonoBehaviour
         spawnDocs();
     }
 
+    //Checks if there is a document that needed to be spawned in the Legislative folder and spawns those document/s based on the id
     private void spawnDocs()
     {
         if (SceneDataManager.DocumentToSpawnInLegisFolder.Count > 0)

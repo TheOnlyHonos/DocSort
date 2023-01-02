@@ -12,6 +12,7 @@ public class DocumenSpawnerJudi : MonoBehaviour
         spawnDocs();
     }
 
+    //Checks if there is a document that needed to be spawned in the Judicial folder and spawns those document/s based on the id
     private void spawnDocs()
     {
         if (SceneDataManager.DocumentToSpawnInJudiFolder.Count > 0)
