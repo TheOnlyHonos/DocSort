@@ -4,25 +4,38 @@ using UnityEngine;
 
 public class LetterSpawner : MonoBehaviour
 {
-    static int LetterCount = 1;
+    static int LetterCount = 8;
     public Transform[] Spawns;
     public GameObject[] Letter;
 
     private void Start()
     {
-        spawnLetters(1, 1);
+        spawnLetters(SceneDataManager.Day, 1);
     }
 
     public void spawnLetters(int day, int id)
     {
-        if(day == 1)
+        if(day == 0)
         {
-            if(id == 1)
+            for(int i = 0; i < LetterCount; i++)
             {
-                for(int i = 0; i < LetterCount; i++)
-                {
-                    Instantiate(Letter[0], Spawns[i].position, Quaternion.identity);
-                }
+                Instantiate(Letter[0], Spawns[i].position, Quaternion.identity);
+            }
+        }
+
+        if (day == 1)
+        {
+            for (int i = 7; i < LetterCount + 8; i++)
+            {
+                Instantiate(Letter[0], Spawns[i].position, Quaternion.identity);
+            }
+        }
+
+        if (day == 2)
+        {
+            for (int i = 15; i < LetterCount + 16; i++)
+            {
+                Instantiate(Letter[0], Spawns[i].position, Quaternion.identity);
             }
         }
     }

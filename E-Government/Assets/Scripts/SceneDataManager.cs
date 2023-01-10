@@ -6,6 +6,8 @@ public class SceneDataManager : MonoBehaviour
 {
     public static SceneDataManager Instance;
 
+    public static int Day = 0;
+
     public static int TotalScore = 0;
     public static int TodayIncome = 0;
 
@@ -39,6 +41,11 @@ public class SceneDataManager : MonoBehaviour
 
     private void Update()
     {
+        if (Day == 3)
+        {
+            //end game here
+        }
+
         //Count the timer
         if (IsTimerOn == true)
         {
@@ -50,7 +57,14 @@ public class SceneDataManager : MonoBehaviour
             {
                 TimeLeft = 0;
                 IsTimerOn = false;
+
+                Day++;
                 CheckIncomeAndScoreDayTemplate();
+
+                DocumentToSpawnInExecFolder.Clear();
+                DocumentToSpawnInLegisFolder.Clear();
+                DocumentToSpawnInJudiFolder.Clear();
+                DocumentToSpawnInRecycleBin.Clear();
             }
         }
     }
@@ -75,4 +89,20 @@ public class SceneDataManager : MonoBehaviour
 
         Debug.Log("Income : " + TodayIncome + "\nDebt : " + Debt);
     }
+
+
+    //Save and load
+    public void SaveData()
+    {
+        SaveSystem.SaveProgress();
+    }
+
+    public void LoadData()
+    {
+        ProgressData data = SaveSystem.LoadProgress();
+
+        Day = data.day;
+        Debt = data.debt;
+    }
+
 }
