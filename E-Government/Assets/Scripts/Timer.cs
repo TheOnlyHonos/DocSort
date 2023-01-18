@@ -31,4 +31,9 @@ public class Timer : MonoBehaviour
 
         TimerTxt.text = string.Format("{0:00} : {1:00}", minute, second);
     }
+
+    public void endDay()
+    {
+        SceneDataManager.TimeLeft = 1;
+    }
 }

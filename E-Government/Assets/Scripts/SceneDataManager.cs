@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneDataManager : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class SceneDataManager : MonoBehaviour
     public static List<int> DocumentToSpawnInRecycleBin = new List<int>();
 
     //Variable for timer per day
-    public static float TimeLeft = 10;
+    public static float TimeLeft = 600;
     public static bool IsTimerOn = true;
 
     private void Start()
@@ -43,7 +44,7 @@ public class SceneDataManager : MonoBehaviour
     {
         if (Day == 3)
         {
-            //end game here
+            //end game here ending
         }
 
         //Count the timer
@@ -61,6 +62,13 @@ public class SceneDataManager : MonoBehaviour
                 Day++;
                 CheckIncomeAndScoreDayTemplate();
 
+                if(Debt > 1)
+                {
+                    SceneManager.LoadScene("GameOver");
+                    Day = 0;
+                    Debt = 0;
+                }
+
                 DocumentToSpawnInExecFolder.Clear();
                 DocumentToSpawnInLegisFolder.Clear();
                 DocumentToSpawnInJudiFolder.Clear();
@@ -71,22 +79,45 @@ public class SceneDataManager : MonoBehaviour
 
     private void CheckIncomeAndScoreDayTemplate()
     {
-        //check if a document with the id 0 is in exec folder and add money
-        for(int i = 0; i < DocumentToSpawnInExecFolder.Count; i++)
+        if(Day == 1)
         {
-            if(DocumentToSpawnInExecFolder[i] == 0)
+            //check if a document with the id 0 is in exec folder and add money
+            for (int i = 0; i < DocumentToSpawnInExecFolder.Count; i++)
             {
-                TodayIncome += 100;
+                if (DocumentToSpawnInExecFolder[i] == 0)
+                {
+                    TodayIncome += 100;
+                }
             }
-        }
 
-        if(TodayIncome < 100)
+            if (TodayIncome < 100)
+            {
+                Debt++;
+            }
+
+            TodayIncome = 0;
+        } else if(Day == 2)
         {
-            Debt++;
+            for (int i = 0; i < DocumentToSpawnInExecFolder.Count; i++)
+            {
+                if (DocumentToSpawnInExecFolder[i] == 0)
+                {
+                    TodayIncome += 100;
+                }
+            }
+
+            if (TodayIncome < 100)
+            {
+                Debt++;
+
+                if(Debt > 1)
+                {
+                    SceneManager.LoadScene("GameOver");
+                }
+            }
+
+            TodayIncome = 0;
         }
-
-        TodayIncome = 0;
-
         Debug.Log("Income : " + TodayIncome + "\nDebt : " + Debt);
     }
 
