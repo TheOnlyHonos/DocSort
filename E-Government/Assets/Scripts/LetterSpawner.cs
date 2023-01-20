@@ -10,10 +10,10 @@ public class LetterSpawner : MonoBehaviour
 
     private void Start()
     {
-        spawnLetters(SceneDataManager.Day, 1);
+        spawnLetters(SceneDataManager.Day);
     }
 
-    public void spawnLetters(int day, int id)
+    public void spawnLetters(int day)
     {
         if(day == 0)
         {
@@ -25,7 +25,7 @@ public class LetterSpawner : MonoBehaviour
 
         if (day == 1)
         {
-            for (int i = 7; i < LetterCount + 8; i++)
+            for (int i = 8; i < LetterCount + 8; i++)
             {
                 Instantiate(Letter[0], Spawns[i].position, Quaternion.identity);
             }
@@ -33,7 +33,7 @@ public class LetterSpawner : MonoBehaviour
 
         if (day == 2)
         {
-            for (int i = 15; i < LetterCount + 16; i++)
+            for (int i = 16; i < LetterCount + 16; i++)
             {
                 Instantiate(Letter[0], Spawns[i].position, Quaternion.identity);
             }

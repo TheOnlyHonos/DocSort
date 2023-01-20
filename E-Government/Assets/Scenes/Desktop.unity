@@ -1249,8 +1249,8 @@ GameObject:
   - component: {fileID: 806297391}
   - component: {fileID: 806297389}
   - component: {fileID: 806297388}
-  - component: {fileID: 806297392}
   - component: {fileID: 806297387}
+  - component: {fileID: 806297392}
   m_Layer: 0
   m_Name: Soundtrack
   m_TagString: Untagged
@@ -1283,7 +1283,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fc481e8b9f01b184ba6488e2eda63690, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 0.146
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1472,7 +1472,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bb00c0225c78f094f8d90a3b33797a70, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.125
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
   Mute: 0

@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NewMessagePrototypeScene.unity
     guid: d23785ed83a6437409b8730756bb10c3
+  - enabled: 1
+    path: Assets/Scenes/DayOver.unity
+    guid: 15327d074b3f0c94d9d2d71e83489a42
   m_configObjects: {}

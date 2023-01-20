@@ -12,6 +12,7 @@ public class SceneDataManager : MonoBehaviour
     public static int TotalScore = 0;
     public static int TodayIncome = 0;
 
+    public int[] Goal = { 100, 200, 300 };
     public static int Debt = 0;
 
     //Lists to hold the amount of documents to spawn in each folder with the document id as the value
@@ -58,8 +59,6 @@ public class SceneDataManager : MonoBehaviour
             {
                 TimeLeft = 0;
                 IsTimerOn = false;
-
-                Day++;
                 CheckIncomeAndScoreDayTemplate();
 
                 if(Debt > 1)
@@ -79,7 +78,7 @@ public class SceneDataManager : MonoBehaviour
 
     private void CheckIncomeAndScoreDayTemplate()
     {
-        if(Day == 1)
+        if(Day == 0)
         {
             //check if a document with the id 0 is in exec folder and add money
             for (int i = 0; i < DocumentToSpawnInExecFolder.Count; i++)
@@ -90,33 +89,13 @@ public class SceneDataManager : MonoBehaviour
                 }
             }
 
-            if (TodayIncome < 100)
+            if (TodayIncome < Goal[0])
             {
                 Debt++;
             }
 
-            TodayIncome = 0;
-        } else if(Day == 2)
-        {
-            for (int i = 0; i < DocumentToSpawnInExecFolder.Count; i++)
-            {
-                if (DocumentToSpawnInExecFolder[i] == 0)
-                {
-                    TodayIncome += 100;
-                }
-            }
-
-            if (TodayIncome < 100)
-            {
-                Debt++;
-
-                if(Debt > 1)
-                {
-                    SceneManager.LoadScene("GameOver");
-                }
-            }
-
-            TodayIncome = 0;
+            DayOver.goal = Goal[0];
+            SceneManager.LoadScene("DayOver");
         }
         Debug.Log("Income : " + TodayIncome + "\nDebt : " + Debt);
     }
