@@ -32,4 +32,64 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DayOver.unity
     guid: 15327d074b3f0c94d9d2d71e83489a42
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 1/Document 1.unity
+    guid: 73c2860e507f9bd478adb899b52b9d6c
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 1/Document 2.unity
+    guid: f6f8cbd8ce9e7f54ab422794877d2e23
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 1/Document 3.unity
+    guid: 95e8797bceee5a142a80ab8b5ebfe738
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 1/Document 4.unity
+    guid: 5d2648b4ad20df0478b0737864905f43
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 1/Document 5.unity
+    guid: 87a116e2078eb8a4abd85b4c18c6272e
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 1/Document 6.unity
+    guid: 87802c8d20c763840b179ff0297ea365
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 2/Document 7.unity
+    guid: 149b6ebfd8441fc49b3d255bd9e1f77e
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 2/Document 8.unity
+    guid: a5343bb8e533cb94faf3d5a5e6b155e4
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 2/Document 9.unity
+    guid: e3d0c051fd0bc834dbb08db825c6cbd6
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 2/Document 10.unity
+    guid: 52e76b5ccd08af742af251793c74c5e6
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 2/Document 11.unity
+    guid: 1828150c413ac2644a287b153b7cd391
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 2/Document 12.unity
+    guid: dd7efe6a41cfb3646a49a874a23e3654
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 3/Document 13.unity
+    guid: b9bf292cb5e66e14199f5f45681e33af
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 3/Document 14.unity
+    guid: f493004b8c7028e46a3f18f6d812e235
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 3/Document 15.unity
+    guid: 36e0e7f69702f9e488d95f88156b87ef
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 3/Document 16.unity
+    guid: d7779c0ab83bc684bbf12725e43d8ffe
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 3/Document 17.unity
+    guid: 9d30cd40c5963474b9128cdc51b97646
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 3/Document 18.unity
+    guid: a6a12a09117b3d1418dcc461ead898d6
+  - enabled: 1
+    path: Assets/Scenes/Dokumen/Day 3/Document 19.unity
+    guid: 636ff8d96dbab524cb61069d8f3fdfd8
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 1c00abb1e574e19418697c6719b882d2
   m_configObjects: {}

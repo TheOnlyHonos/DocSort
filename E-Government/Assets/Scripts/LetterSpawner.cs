@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LetterSpawner : MonoBehaviour
 {
-    static int LetterCount = 8;
     public Transform[] Spawns;
     public GameObject[] Letter;
 
@@ -17,25 +16,25 @@ public class LetterSpawner : MonoBehaviour
     {
         if(day == 0)
         {
-            for(int i = 0; i < LetterCount; i++)
+            for(int i = 0; i < 6; i++)
             {
-                Instantiate(Letter[0], Spawns[i].position, Quaternion.identity);
+                Instantiate(Letter[i + 1], Spawns[i].position, Quaternion.identity);
             }
         }
 
         if (day == 1)
         {
-            for (int i = 8; i < LetterCount + 8; i++)
+            for (int i = 0; i < 6; i++)
             {
-                Instantiate(Letter[0], Spawns[i].position, Quaternion.identity);
+                Instantiate(Letter[i + 7], Spawns[i].position, Quaternion.identity);
             }
         }
 
         if (day == 2)
         {
-            for (int i = 16; i < LetterCount + 16; i++)
+            for (int i = 0; i < 7; i++)
             {
-                Instantiate(Letter[0], Spawns[i].position, Quaternion.identity);
+                Instantiate(Letter[i + 13], Spawns[i].position, Quaternion.identity);
             }
         }
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class ProgressData : MonoBehaviour
+public class ProgressData
 {
     public int day;
     public int debt;

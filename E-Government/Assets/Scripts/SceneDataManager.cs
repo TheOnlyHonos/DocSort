@@ -11,8 +11,6 @@ public class SceneDataManager : MonoBehaviour
 
     public static int TotalScore = 0;
     public static int TodayIncome = 0;
-
-    public int[] Goal = { 100, 200, 300 };
     public static int Debt = 0;
 
     //Lists to hold the amount of documents to spawn in each folder with the document id as the value
@@ -28,6 +26,7 @@ public class SceneDataManager : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
+        LoadData();
     }
 
     private void Awake()
@@ -83,30 +82,132 @@ public class SceneDataManager : MonoBehaviour
             //check if a document with the id 0 is in exec folder and add money
             for (int i = 0; i < DocumentToSpawnInExecFolder.Count; i++)
             {
-                if (DocumentToSpawnInExecFolder[i] == 0)
+                if (DocumentToSpawnInExecFolder[i] == 1 ||
+                    DocumentToSpawnInExecFolder[i] == 3 ||
+                    DocumentToSpawnInExecFolder[i] == 5)
+                {
+                    TodayIncome += 100;
+                } 
+            }
+
+            for (int i = 0; i < DocumentToSpawnInLegisFolder.Count; i++)
+            {
+                if (DocumentToSpawnInLegisFolder[i] == 2)
                 {
                     TodayIncome += 100;
                 }
             }
 
-            if (TodayIncome < Goal[0])
+            for (int i = 0; i < DocumentToSpawnInJudiFolder.Count; i++)
+            {
+                if (DocumentToSpawnInJudiFolder[i] == 4 ||
+                    DocumentToSpawnInJudiFolder[i] == 6)
+                {
+                    TodayIncome += 100;
+                }
+            }
+
+            if (TodayIncome < 300)
             {
                 Debt++;
             }
 
-            DayOver.goal = Goal[0];
+            DayOver.goal = 300;
+            SceneManager.LoadScene("DayOver");
+        } 
+
+        else if (Day == 1)
+        {
+            //check if a document with the id 0 is in exec folder and add money
+            for (int i = 0; i < DocumentToSpawnInExecFolder.Count; i++)
+            {
+                if (DocumentToSpawnInExecFolder[i] == 7)
+                {
+                    TodayIncome += 100;
+                }
+            }
+
+            for (int i = 0; i < DocumentToSpawnInLegisFolder.Count; i++)
+            {
+                if (DocumentToSpawnInLegisFolder[i] == 9)
+                {
+                    TodayIncome += 100;
+                }
+            }
+
+            for (int i = 0; i < DocumentToSpawnInRecycleBin.Count; i++)
+            {
+                if (DocumentToSpawnInRecycleBin[i] == 8 ||
+                    DocumentToSpawnInRecycleBin[i] == 10 ||
+                    DocumentToSpawnInRecycleBin[i] == 11 ||
+                    DocumentToSpawnInRecycleBin[i] == 12)
+                {
+                    TodayIncome += 100;
+                }
+            }
+
+            if (TodayIncome < 400)
+            {
+                Debt++;
+            }
+
+            DayOver.goal = 400;
             SceneManager.LoadScene("DayOver");
         }
-        Debug.Log("Income : " + TodayIncome + "\nDebt : " + Debt);
+
+        else if (Day == 2)
+        {
+            //check if a document with the id 0 is in exec folder and add money
+            for (int i = 0; i < DocumentToSpawnInLegisFolder.Count; i++)
+            {
+                if (DocumentToSpawnInLegisFolder[i] == 17)
+                {
+                    TodayIncome += 100;
+                }
+
+                if (DocumentToSpawnInLegisFolder[i] == 19)
+                {
+                    TodayIncome += 100;
+                    TotalScore++;
+                }
+            }
+
+            for (int i = 0; i < DocumentToSpawnInJudiFolder.Count; i++)
+            {
+                if (DocumentToSpawnInJudiFolder[i] == 18)
+                {
+                    TodayIncome += 100;
+                }
+
+                if (DocumentToSpawnInJudiFolder[i] == 15)
+                {
+                    TodayIncome += 100;
+                    TotalScore++;
+                }
+            }
+
+            for (int i = 0; i < DocumentToSpawnInRecycleBin.Count; i++)
+            {
+                if (DocumentToSpawnInRecycleBin[i] == 13 ||
+                    DocumentToSpawnInRecycleBin[i] == 14 ||
+                    DocumentToSpawnInRecycleBin[i] == 16)
+                {
+                    TodayIncome += 100;
+                }
+            }
+
+            if (TodayIncome < 500)
+            {
+                Debt++;
+            }
+
+            DayOver.goal = 500;
+            SceneManager.LoadScene("DayOver");
+        }
     }
 
 
-    //Save and load
-    public void SaveData()
-    {
-        SaveSystem.SaveProgress();
-    }
-
+    //load save
     public void LoadData()
     {
         ProgressData data = SaveSystem.LoadProgress();

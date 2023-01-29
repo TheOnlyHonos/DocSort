@@ -36,6 +36,8 @@ public class DayOver : MonoBehaviour
     {
         SceneDataManager.TodayIncome = 0;
         SceneDataManager.Day++;
+        SceneDataManager.TimeLeft = 600;
+        SceneDataManager.IsTimerOn = true;
         SceneManager.LoadScene("Desktop");
     }
 }
