@@ -242,10 +242,10 @@ RectTransform:
   m_Father: {fileID: 1787976813}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -146.20001, y: -189.6}
-  m_SizeDelta: {x: 94.7, y: 67.51}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -146.20001, y: 30.399963}
+  m_SizeDelta: {x: 94.7, y: 67.51001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &224746939
 MonoBehaviour:
@@ -608,10 +608,10 @@ RectTransform:
   m_Father: {fileID: 1787976813}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51.499992, y: -189.6}
-  m_SizeDelta: {x: 94.7, y: 67.51}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -51.499992, y: 30.399963}
+  m_SizeDelta: {x: 94.7, y: 67.51001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1347122234
 MonoBehaviour:
@@ -742,10 +742,10 @@ RectTransform:
   m_Father: {fileID: 1787976813}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43.199997, y: -189.6}
-  m_SizeDelta: {x: 94.7, y: 67.51}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 43.199997, y: 30.399963}
+  m_SizeDelta: {x: 94.7, y: 67.51001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1413276188
 MonoBehaviour:
@@ -956,10 +956,10 @@ RectTransform:
   m_Father: {fileID: 1787976813}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 137.9, y: -189.6}
-  m_SizeDelta: {x: 94.7, y: 67.51}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 137.9, y: 30.399963}
+  m_SizeDelta: {x: 94.7, y: 67.51001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1741006831
 MonoBehaviour:
@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
