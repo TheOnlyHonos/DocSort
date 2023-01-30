@@ -42,9 +42,27 @@ public class SceneDataManager : MonoBehaviour
 
     private void Update()
     {
-        if (Day == 3)
+        if (Day > 2)
         {
-            //end game here ending
+            //Ending 1 (no debt and no bribe)
+            if (Debt < 1 && TotalScore < 1){
+                SceneManager.LoadScene("Ending 1");
+                Destroy(gameObject);
+            } 
+            
+            //Ending 2 (no bribe)
+            else if (TotalScore < 1)
+            {
+                SceneManager.LoadScene("Ending 2");
+                Destroy(gameObject);
+            }
+
+            //Ending 3 (took bribe)
+            else if (TotalScore > 0)
+            {
+                SceneManager.LoadScene("Ending 3");
+                Destroy(gameObject);
+            }
         }
 
         //Count the timer
